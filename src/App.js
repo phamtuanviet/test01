@@ -11,7 +11,7 @@ const App = () => {
   const [movies, setMovies] = useState([]);
 
   React.useEffect(() => {
-    console.log("gioi thi fix con flict")
+    console.log("gioi thi fix con")
   }, [])
 
 
@@ -22,6 +22,7 @@ const App = () => {
     setMovies(data.Search);
   };
 
+  const ngu = React.useMemo(() => 20, [])
   return (
     <div className="app">
       <h1>MovieLand</h1>
