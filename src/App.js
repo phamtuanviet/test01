@@ -10,6 +10,10 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
 
+  React.useEffect(() => {
+    console.log("gioi thi fix con flict")
+  }, [])
+
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
